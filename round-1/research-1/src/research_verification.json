@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "file_errors": [],
+  "schema_errors": [],
+  "content_warnings": [
+    "research_out.json: Only 2 sources (recommend at least 3)",
+    "structured_output: Only 2 sources (recommend at least 3)"
+  ],
+  "files_found": {
+    "research_out.json": {
+      "exists": true,
+      "path": "./research_out.json",
+      "source_count": 2,
+      "size": 2663
+    }
+  },
+  "source_count": 2,
+  "checked_at": "2026-11-11T19:55:30.199310+00:00",
+  "passage_check_scope": "Case/whitespace-normalized text occurrence at the source URL (or archive fallback). Not claim entailment, locator verification, or author/year verification. status=error means unverified, not a misquotation.",
+  "passages": []
+}

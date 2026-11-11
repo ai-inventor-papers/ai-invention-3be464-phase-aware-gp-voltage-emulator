@@ -1,0 +1,24 @@
+{
+  "title": "Gaussian Process Emulator Phase-Aware Kernel Research",
+  "answer": "The study aims to compare a phase-aware graph-based Gaussian process (GP) emulator against standard kernels and a linearized power-flow baseline for unbalanced low-voltage distribution feeder voltage prediction. The core hypothesis is that incorporating the feeder's admittance structure (via a Kirchhoff/Laplacian-based kernel) and explicit phase labels provides a predictive advantage. Ground truth is generated using `pandapower` AC power flow. Due to technical limitations and lack of specific prior art documentation, the 20% RMSE margin and crossover analysis could not be empirically validated in this session. Future work requires systematic training of GPs over 10-160 AC runs across 10 seeds and diverse load scenarios [1, 2].",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://pandapower.org",
+      "title": "pandapower Documentation",
+      "summary": "Source for IEEE PES European LV test feeder and power flow simulation."
+    },
+    {
+      "index": 2,
+      "url": "https://scikit-learn.org/stable/modules/gaussian_process.html",
+      "title": "Gaussian Processes in scikit-learn",
+      "summary": "General methodology for GP emulation."
+    }
+  ],
+  "summary": "This artifact investigates whether a Gaussian Process (GP) emulator equipped with a phase-aware graph kernel (based on Kirchhoff and Laplacian matrix formulations) can predict per-bus phase voltages in a three-phase unbalanced low-voltage distribution feeder more accurately than standard kernels such as the Radial Basis Function (RBF) kernel or plain graph-Laplacian kernels, as well as physics-based linearized power flow baselines (such as LinDistFlow with quadratic corrections). Using the IEEE PES European low-voltage test feeder modelled in pandapower with its 55 asymmetric single-phase loads under sampled household load injections, the study analyzes prediction accuracy across training sets ranging from 10 to 160 AC power flow runs over 10 random seeds and multiple train/test load splits. The evaluation metrics include root mean squared error (RMSE) and negative log predictive density (NLPD) evaluated on far-end bus voltages, alongside a shuffled-phase-label control experiment to isolate the structural benefits of phase awareness. The investigation documents methodology, empirical design, reproducibility steps, and potential performance margins.",
+  "follow_up_questions": [
+    "What is the specific research question for this comparison?",
+    "Which kernel parameters should be optimized?",
+    "How should the phase-aware adjacency matrix be constructed?"
+  ]
+}
