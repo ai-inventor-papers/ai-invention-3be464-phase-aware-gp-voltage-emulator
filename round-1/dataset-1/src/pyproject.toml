@@ -1,0 +1,16 @@
+[project]
+name = "ieee_european_lv_dataset"
+version = "0.1.0"
+description = "Dataset generator for IEEE European LV asymmetric test feeder"
+requires-python = ">=3.10"
+dependencies = [
+    "pandapower==3.5.6",
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "networkx==3.7",
+    "scipy==1.16.3",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
